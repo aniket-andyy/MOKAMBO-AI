@@ -15,8 +15,10 @@ from langchain_core.messages import AIMessage, SystemMessage, HumanMessage
 def load_model():
     return ChatMistralAI(
         model="mistral-small-2506",
-        temperature=0.9
+        temperature=0.9,
+        api_key=st.secrets["MISTRAL_API_KEY"]
     )
+
 
 
 model = load_model()
